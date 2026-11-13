@@ -13,12 +13,10 @@ def adauga_canale(url, tara):
         for line in content:
             line = line.strip()
             if line.startswith("#EXTINF"):
-                if 'group-title="' in line:
-                    parts = line.split('group-title="')
-                    rest = parts[1].split('"', 1)[1]
-                    info = f'{parts[0]}group-title="{tara}"{rest}'
-                else:
-                    info = line.replace("#EXTINF:-1", f'#EXTINF:-1 group-title="{tara}"', 1)
+                nume = line.split(",")[-1].strip()
+                info = f'#EXTINF:-1 group-title="{tara}",{nume}'
+            elif line.startswith("#"):
+                continue
             elif line.startswith("http") and info:
                 lines.append(info)
                 lines.append(line)
