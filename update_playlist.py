@@ -1,43 +1,33 @@
-import os
 import urllib.request
-import json
 
-API_KEY = os.environ.get("TMDB_API_KEY")
-BASE = "https://" + "api.themoviedb.org/3/"
-IMG = "https://" + "image.tmdb.org/t/p/w500"
-YT = "https://" + "www." + "youtube.com" + "/watch?v="
-
-def fetch_tmdb(endpoint):
-    url = f"{BASE}{endpoint}?api_key={API_KEY}&language=ro-RO"
-    req = urllib.request.urlopen(url)
-    return json.loads(req.read().decode("utf-8")).get("results", [])
-
-def get_trailer(media_type, item_id):
-    url = f"{BASE}{media_type}/{item_id}/videos?api_key={API_KEY}"
-    req = urllib.request.urlopen(url)
-    videos = json.loads(req.read().decode("utf-8")).get("results", [])
-    for v in videos:
-        if v.get("site") == "YouTube" and v.get("type") == "Trailer":
-            return f"{YT}{v['key']}"
-    return None
+RO_URL = "https://" + "iptv-org.github.io" + "/iptv/countries/ro.m3u"
+DE_URL = "https://" + "iptv-org.github.io" + "/iptv/countries/de.m3u"
 
 lines = ["#EXTM3U"]
 
-for movie in fetch_tmdb("trending/movie/week"):
-    title = movie.get("title", "Film Nou").replace(",", " ")
-    poster = f"{IMG}{movie['poster_path']}" if movie.get("poster_path") else ""
-    trailer = get_trailer("movie", movie["id"])
-    if trailer:
-        lines.append(f'#EXTINF:-1 tvg-logo="{poster}" group-title="Filme Noi (Trailere)",{title}')
-        lines.append(trailer)
+def adauga_canale(url, tara):
+    try:
+        req = urllib.request.urlopen(url, timeout=15)
+        content = req.read().decode("utf-8").splitlines()
+        info = ""
+        for line in content:
+            line = line.strip()
+            if line.startswith("#EXTINF"):
+                if 'group-title="' in line:
+                    parts = line.split('group-title="')
+                    rest = parts[1].split('"', 1)[1]
+                    info = f'{parts[0]}group-title="{tara}"{rest}'
+                else:
+                    info = line.replace("#EXTINF:-1", f'#EXTINF:-1 group-title="{tara}"', 1)
+            elif line.startswith("http") and info:
+                lines.append(info)
+                lines.append(line)
+                info = ""
+    except Exception as e:
+        print(f"Eroare la {tara}: {e}")
 
-for tv in fetch_tmdb("trending/tv/week"):
-    name = tv.get("name", "Serial Nou").replace(",", " ")
-    poster = f"{IMG}{tv['poster_path']}" if tv.get("poster_path") else ""
-    trailer = get_trailer("tv", tv["id"])
-    if trailer:
-        lines.append(f'#EXTINF:-1 tvg-logo="{poster}" group-title="Seriale Noi (Trailere)",{name}')
-        lines.append(trailer)
+adauga_canale(RO_URL, "Romania TV")
+adauga_canale(DE_URL, "Germania TV")
 
 with open("playlist.m3u", "w", encoding="utf-8") as f:
     f.write("\n".join(lines) + "\n")
