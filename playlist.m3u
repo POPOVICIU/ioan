@@ -142,7 +142,7 @@ https://stream1.antenaplay.ro/promo/formula-1-las-vegas-20-2211/chunklist.m3u8
 #EXTINF:-1 group-title="Romania TV",Formula 2 AntenaPlay (576i) [Not 24/7]
 https://stream1.antenaplay.ro/promo/formula-2-qatar/chunklist.m3u8
 #EXTINF:-1 group-title="Romania TV",Formula Academy AntenaPlay (576p) [Not 24/7]
-https://stream1.antenaplay.ro/promo/f1-academy-las-vegas-general-2026/chunklist.m3u8
+https://stream1.antenaplay.ro/promo/f1-academy-las-vegas-20-2211/chunklist.m3u8
 #EXTINF:-1 group-title="Romania TV",Happy Channel HD (1080i)
 https://live77cdn2.antenaplay.ro/live2_aws4_sdi12/live2_aws4_sdi12_5000k.m3u8
 #EXTINF:-1 group-title="Romania TV",HD365 TV
@@ -175,6 +175,8 @@ https://live.intermediatv.ro/ram/playlist.m3u8
 https://live77cdn2.antenaplay.ro/live2_fast/ch3/stream.m3u8
 #EXTINF:-1 group-title="Romania TV",iUmor (576p)
 https://live77cdn2.antenaplay.ro/live2_fast/ch2/stream.m3u8
+#EXTINF:-1 group-title="Romania TV",JimJam (Romania) (576p)
+https://rundle.tv/proxy5.php?src=https%3A%2F%2Fsaruman1.tharen001.cfd%2Fjimy%2Fusergenq3n0lz7kr-got.htm
 #EXTINF:-1 group-title="Romania TV",JOB TV (1080p)
 https://jobtvserver.eu/hls/stream.m3u8
 #EXTINF:-1 group-title="Romania TV",Kanal D2 (1080i)
@@ -255,6 +257,10 @@ http://sultanios.alwaysdata.net/vavo.php?ID=3381201599
 http://sultanios.alwaysdata.net/vavo.php?ID=2762629881
 #EXTINF:-1 group-title="Romania TV",Prima Sport 4 HD
 http://sultanios.alwaysdata.net/vavo.php?ID=3194919143
+#EXTINF:-1 group-title="Romania TV",Prima Sport PPV 1
+https://rundle.tv/proxy5.php?src=https%3A%2F%2Fpulse1.sanseny001.shop%2Fpuki1%2Fusergendx6kal0r2bsm-got.htm
+#EXTINF:-1 group-title="Romania TV",Prima Sport PPV 2
+https://rundle.tv/proxy5.php?src=https%3A%2F%2Fpulse1.sanseny001.shop%2Fpuki2%2Fusergendxpk2s6utg0l-got.htm
 #EXTINF:-1 group-title="Romania TV",Prima TV (Romania)
 http://89.44.231.73:7000/primatv
 #EXTINF:-1 group-title="Romania TV",Pro Arena (1080p)
@@ -315,6 +321,10 @@ https://live.sangeorztv.ro:8443/live/index.m3u8?cookieCheck=1
 https://live.senstv.ro/live/senstv_1080p/chunklist.m3u8
 #EXTINF:-1 group-title="Romania TV",Shop On TV (576i) [Geo-blocked]
 https://vs2131.vcdn.biz/07f4d8c8729f786dd1bb07d0512b71eb_megogo/live/hls/b/700_2490_4000/u_sid/0/o/183161731/rsid/f5e3c4b1-6357-466d-bf95-eb6bc5453333/u_uid/2260062697/u_vod/0/u_device/cms_html5/u_devicekey/_site/lip/81.196.174.160*asn/u_srvc/109126/u_did/web_c02d0d195494991ada83b5ae2a2f87d6041c11b1b8f79fc86ae5b7b557894fa0/type.live/playlist.m3u8
+#EXTINF:-1 group-title="Romania TV",SkyShowtime 1
+https://rundle.tv/proxy5.php?src=https%3A%2F%2Fthor1.syndula001.cfd%2Fschi1%2Fusergendxn430rnd-got.htm
+#EXTINF:-1 group-title="Romania TV",SkyShowtime 2
+https://rundle.tv/proxy5.php?src=https%3A%2F%2Fthor1.syndula001.cfd%2Fschi2%2Fusergendxj85trnd-got.htm
 #EXTINF:-1 group-title="Romania TV",Smart Radio (576p)
 https://streamw.m.ro/Regie/radio.stream/chunklist.m3u8
 #EXTINF:-1 group-title="Romania TV",SperantaTV (1080p)
@@ -405,8 +415,8 @@ https://vip-acasatv.online:25463/lrZuGxAuP3/6782859900/714.m3u8
 https://flash1.bogulus1.cfd/tivi10/usergenrxs4f7zc.m3u8
 #EXTINF:-1 group-title="Romania TV",Voyo Events (576i) [Not 24/7]
 http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-protv-plus5/live_fullhd?offsetSeconds=0
-#EXTINF:-1 group-title="Romania TV",Voyo Sport 1 (1080p)
-http://34.92.70.128/VOYO-SPORT-1/index.m3u8
+#EXTINF:-1 group-title="Romania TV",Voyo Sport 1 (1080i)
+https://vip-acasatv.online:25463/lrZuGxAuP3/6782859900/16677.m3u8
 #EXTINF:-1 group-title="Romania TV",Zece TV
 https://zecetv.ilink.ro:8088/hls/live.m3u8
 #EXTINF:-1 group-title="Germania TV",1-2-3.tv (270p)
