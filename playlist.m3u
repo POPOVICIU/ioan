@@ -369,7 +369,7 @@ https://hls01ns.antenaplay.ro/hls/trinitas-tv-sd/index.m3u8
 https://netstreaming.eu/tv1.m3u8
 #EXTINF:-1 group-title="Romania TV",TV Arad (576i)
 https://live.djemba.ro/memfs/1b01c281-126d-4787-9d51-9e06c96bb9f9.m3u8
-#EXTINF:-1 group-title="Romania TV",TV AS
+#EXTINF:-1 group-title="Romania TV",TV AS (Romania)
 https://hls01ns.antenaplay.ro/hls/tv-as-sd/index.m3u8
 #EXTINF:-1 group-title="Romania TV",TV Buzau (576p)
 http://78.96.33.89:8080
